@@ -9,6 +9,7 @@ public class playerControls : MonoBehaviour
     public float speedMove;
     public float jumpingPower;
     public SpriteRenderer sprtRnd;
+    public Animator animPlayer;
 
     private float horizontal;
     private bool isFacingRaight = true;
@@ -28,6 +29,17 @@ public class playerControls : MonoBehaviour
     //Metodo privado que sirve para hacer una llamada interna
     private void checkMovement() 
     {
+
+        if(Mathf.Abs(horizontal) != 0f)
+        {
+            animPlayer.SetBool("isRunning", true);
+        }
+        else
+        {
+            animPlayer.SetBool("isRunning", false);
+        }
+
+
         rb.velocity = new Vector2(horizontal * speedMove, rb.velocity.y);
         if (!isFacingRaight && horizontal > 0f)
         {
@@ -53,6 +65,11 @@ public class playerControls : MonoBehaviour
     {
         if(checkSuelo.isGrounded){
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+            animPlayer.SetBool("isSuelo", true);
+        }
+        else
+        {
+            animPlayer.SetBool("isSuelo", false);
         }
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class checkSuelo : MonoBehaviour
 {
-    public static bool isGrounded; 
+    public static bool isGrounded;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -15,4 +15,5 @@ public class checkSuelo : MonoBehaviour
     {
         isGrounded = false;
     }
+
 }

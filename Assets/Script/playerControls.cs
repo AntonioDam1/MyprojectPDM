@@ -27,10 +27,9 @@ public class playerControls : MonoBehaviour
     }
 
     //Metodo privado que sirve para hacer una llamada interna
-    private void checkMovement() 
+    public void checkMovement()
     {
-
-        if(Mathf.Abs(horizontal) != 0f)
+        if (Mathf.Abs(horizontal) != 0f) 
         {
             animPlayer.SetBool("isRunning", true);
         }
@@ -40,16 +39,29 @@ public class playerControls : MonoBehaviour
         }
 
 
-        rb.velocity = new Vector2(horizontal * speedMove, rb.velocity.y);
+        if (checkSuelo.isGrounded)
+        {
+            rb.velocity = new Vector2(horizontal * speedMove, rb.velocity.y);
+            animPlayer.SetBool("isSuelo", true);
+        }
+        else
+        {
+            animPlayer.SetBool("isSuelo", false);
+        }
+
+
+
+
         if (!isFacingRaight && horizontal > 0f)
         {
-            //Girar a la derecha
+            // Girar a la derecha
             isFacingRaight = true;
             sprtRnd.flipX = false;
+
         }
         else if (isFacingRaight && horizontal < 0f)
         {
-            // Girar a la izuqierda
+            // Girar a la izquierda
             isFacingRaight = false;
             sprtRnd.flipX = true;
         }
@@ -58,18 +70,13 @@ public class playerControls : MonoBehaviour
     public void Move(InputAction.CallbackContext context)
     {
         horizontal = context.ReadValue<Vector2>().x;
-        //Para ver la posicion horizontal que va de 1 a 0 a -1 (Debug.Log(horizontal));
     }
+
 
     public void Jump()
     {
         if(checkSuelo.isGrounded){
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
-            animPlayer.SetBool("isSuelo", true);
-        }
-        else
-        {
-            animPlayer.SetBool("isSuelo", false);
         }
     }
 }

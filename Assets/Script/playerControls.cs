@@ -14,7 +14,7 @@ public class playerControls : MonoBehaviour
     public GameObject arrow;
 
     private float horizontal;
-    private bool isFacingRaight = true;
+    private bool isFacingRaight = true;-
     // Start is called before the first frame update
     void Start()
     {

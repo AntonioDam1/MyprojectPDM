@@ -31218,7 +31218,7 @@ MonoBehaviour:
   sprtRnd: {fileID: 540044710}
   animPlayer: {fileID: 540044709}
   transformPlayer: {fileID: 540044708}
-  arrow: {fileID: 0}
+  arrow: {fileID: 4450817926292564368, guid: 9dfe5d7a163294c408b90d0f1197bff5, type: 3}
 --- !u!114 &540044714
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33341,6 +33341,7 @@ GameObject:
   - component: {fileID: 757259417}
   - component: {fileID: 757259419}
   - component: {fileID: 757259418}
+  - component: {fileID: 757259420}
   m_Layer: 0
   m_Name: cajas
   m_TagString: Untagged
@@ -33754,6 +33755,44 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!19719996 &757259420
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 757259416}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0
+  m_UseDelaunayMesh: 0
 --- !u!1 &778006088
 GameObject:
   m_ObjectHideFlags: 0
@@ -36404,7 +36443,7 @@ Transform:
   m_GameObject: {fileID: 968914348}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.7883, y: 2.4284072, z: -2.6746821}
+  m_LocalPosition: {x: 8.311295, y: 2.4284072, z: -2.6746821}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -36421,6 +36460,7 @@ GameObject:
   - component: {fileID: 1042580352}
   - component: {fileID: 1042580354}
   - component: {fileID: 1042580353}
+  - component: {fileID: 1042580355}
   m_Layer: 0
   m_Name: pinchos
   m_TagString: Untagged
@@ -36792,6 +36832,44 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!19719996 &1042580355
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1042580351}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0
+  m_UseDelaunayMesh: 0
 --- !u!1 &1198538159
 GameObject:
   m_ObjectHideFlags: 0
@@ -39152,7 +39230,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c2f1257a16804a24ea108de86f6ef239, type: 2}
+  - {fileID: 2100000, guid: 8dbf210093a8b4042a3e83f86658f7a4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -138273,6 +138351,63 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1001 &7188877991889682304
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4450817926292564368, guid: 9dfe5d7a163294c408b90d0f1197bff5, type: 3}
+      propertyPath: m_Name
+      value: arrow_
+      objectReference: {fileID: 0}
+    - target: {fileID: 6030208197452588717, guid: 9dfe5d7a163294c408b90d0f1197bff5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -92.07835
+      objectReference: {fileID: 0}
+    - target: {fileID: 6030208197452588717, guid: 9dfe5d7a163294c408b90d0f1197bff5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.11400342
+      objectReference: {fileID: 0}
+    - target: {fileID: 6030208197452588717, guid: 9dfe5d7a163294c408b90d0f1197bff5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6030208197452588717, guid: 9dfe5d7a163294c408b90d0f1197bff5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6030208197452588717, guid: 9dfe5d7a163294c408b90d0f1197bff5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6030208197452588717, guid: 9dfe5d7a163294c408b90d0f1197bff5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6030208197452588717, guid: 9dfe5d7a163294c408b90d0f1197bff5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6030208197452588717, guid: 9dfe5d7a163294c408b90d0f1197bff5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6030208197452588717, guid: 9dfe5d7a163294c408b90d0f1197bff5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6030208197452588717, guid: 9dfe5d7a163294c408b90d0f1197bff5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9dfe5d7a163294c408b90d0f1197bff5, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -138280,3 +138415,4 @@ SceneRoots:
   - {fileID: 112736865}
   - {fileID: 1605420189}
   - {fileID: 778006089}
+  - {fileID: 7188877991889682304}

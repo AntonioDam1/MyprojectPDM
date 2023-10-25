@@ -10,6 +10,8 @@ public class playerControls : MonoBehaviour
     public float jumpingPower;
     public SpriteRenderer sprtRnd;
     public Animator animPlayer;
+    public Transform transformPlayer;
+    public GameObject arrow;
 
     private float horizontal;
     private bool isFacingRaight = true;
@@ -78,5 +80,11 @@ public class playerControls : MonoBehaviour
         if(checkSuelo.isGrounded){
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
         }
+    }
+
+    public void Shoot()
+    {
+        //Debug.Log("Disparo");
+        Instantiate(arrow,transformPlayer.position, Quaternion.identity);
     }
 }

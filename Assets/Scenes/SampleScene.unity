@@ -31217,6 +31217,8 @@ MonoBehaviour:
   jumpingPower: 5
   sprtRnd: {fileID: 540044710}
   animPlayer: {fileID: 540044709}
+  transformPlayer: {fileID: 540044708}
+  arrow: {fileID: 0}
 --- !u!114 &540044714
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31274,6 +31276,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 799a4ec2-1933-4791-9466-d4b75db836f5
     m_ActionName: 'PlayerMove/jump[/Keyboard/space]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 540044713}
+        m_TargetAssemblyTypeName: playerControls, Assembly-CSharp
+        m_MethodName: Shoot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: e6771be8-d86e-40a9-8d5b-b2b9ea02a786
+    m_ActionName: 'PlayerMove/shoot[/Keyboard/e]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: PlayerMove
@@ -36386,7 +36404,7 @@ Transform:
   m_GameObject: {fileID: 968914348}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.311295, y: 2.4284072, z: -2.6746821}
+  m_LocalPosition: {x: 12.7883, y: 2.4284072, z: -2.6746821}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -39134,7 +39152,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8724a7fe50173af459602a2d48f999dd, type: 2}
+  - {fileID: 2100000, guid: c2f1257a16804a24ea108de86f6ef239, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

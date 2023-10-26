@@ -11,10 +11,14 @@ public class playerControls : MonoBehaviour
     public SpriteRenderer sprtRnd;
     public Animator animPlayer;
     public Transform transformPlayer;
-    public GameObject arrow;
+    public GameObject arrowPrefab;
+    public float waithShootTime;
+    public GameObject arowOut;
 
     private float horizontal;
-    private bool isFacingRaight = true;-
+    private bool isFacingRaight = true;
+    private Vector2 directionArrow;
+    private float lastShoot;
     // Start is called before the first frame update
     void Start()
     {
@@ -82,9 +86,28 @@ public class playerControls : MonoBehaviour
         }
     }
 
+    public void shootAnimation()
+    {
+        if (Time.time > lastShoot + waithShootTime)
+        {
+            animPlayer.SetTrigger("isShoot");
+            lastShoot = Time.time;
+        }
+        
+    }
+
     public void Shoot()
     {
+        GameObject arrow = Instantiate(arrowPrefab, arowOut.transform.position, Quaternion.identity);
+        if (sprtRnd.flipX)
+        {
+            directionArrow = Vector2.left;
+        }
+        else
+        {
+            directionArrow = Vector2.right;
+        }
         //Debug.Log("Disparo");
-        Instantiate(arrow,transformPlayer.position, Quaternion.identity);
+        arrow.GetComponent<ArrowController>().setDirection(directionArrow);
     }
 }

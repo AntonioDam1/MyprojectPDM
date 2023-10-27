@@ -6,14 +6,19 @@ public class checkSuelo : MonoBehaviour
 {
     public static bool isGrounded;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        isGrounded = true;
+        if (other.gameObject.CompareTag("Suelo")) 
+        {
+            isGrounded = true;
+        }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    private void OnTriggerExit2D(Collider2D other)
     {
-        isGrounded = false;
+        if (other.gameObject.CompareTag("Suelo"))
+        {
+            isGrounded = false;
+        }
     }
-
 }

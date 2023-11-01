@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class playerControls : MonoBehaviour
 {
@@ -14,6 +16,7 @@ public class playerControls : MonoBehaviour
     public GameObject arrowPrefab;
     public float waithShootTime;
     public GameObject arowOut;
+    public UnityEvent loadNewScene;
 
     private float horizontal;
     private bool isFacingRaight = true;
@@ -109,5 +112,19 @@ public class playerControls : MonoBehaviour
         }
         //Debug.Log("Disparo");
         arrow.GetComponent<ArrowController>().setDirection(directionArrow);
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Enemy")) 
+        {
+            animPlayer.SetTrigger("isDeath");
+            
+        } 
+    }
+
+    public void loadScene()
+    {
+        loadNewScene.Invoke();
     }
 }

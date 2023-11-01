@@ -34,4 +34,9 @@ public class ghostController : MonoBehaviour
             rb.velocity = new Vector2((-1f) * speedGhost, 0);
         }
     }
+
+    public void death()
+    {
+        Destroy(gameObject);
+    }
 }

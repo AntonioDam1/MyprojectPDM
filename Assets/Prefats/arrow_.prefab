@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6030208197452588717}
   - component: {fileID: 7264178989186887213}
   - component: {fileID: 6649563225057249153}
+  - component: {fileID: -8228172293499197033}
   m_Layer: 0
   m_Name: arrow_
   m_TagString: Untagged
@@ -100,3 +101,40 @@ MonoBehaviour:
   speedArrow: 10
   transformArrow: {fileID: 6030208197452588717}
   liveArrow: 2
+--- !u!70 &-8228172293499197033
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4450817926292564368}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.691452, y: 1.10931}
+  m_Direction: 0

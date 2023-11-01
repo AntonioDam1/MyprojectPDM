@@ -42,6 +42,14 @@ public class ArrowController : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Enemy")) 
+        {
+            other.GetComponent<Animator>().SetTrigger("isDeath");
+        }
+    }
+
     public void setDirection(Vector2 dir) 
     { 
         arrowDirection = dir;       

@@ -125,6 +125,6 @@ public class playerControls : MonoBehaviour
 
     public void loadScene()
     {
-        loadNewScene.Invoke();
+        loadNewScene.Invoke();  
     }
 }

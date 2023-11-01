@@ -17,6 +17,8 @@ public class playerControls : MonoBehaviour
     public float waithShootTime;
     public GameObject arowOut;
     public UnityEvent loadNewScene;
+    public AudioSource soundEfectArrow;
+    public AudioSource soundEfectDeath;
 
     private float horizontal;
     private bool isFacingRaight = true;
@@ -95,6 +97,7 @@ public class playerControls : MonoBehaviour
         {
             animPlayer.SetTrigger("isShoot");
             lastShoot = Time.time;
+            soundEfectArrow.Play();
         }
         
     }
@@ -119,7 +122,9 @@ public class playerControls : MonoBehaviour
         if (other.gameObject.CompareTag("Enemy")) 
         {
             animPlayer.SetTrigger("isDeath");
-            
+            soundEfectDeath.Play();
+
+            Object.FindFirstObjectByType<MainCameraScript>().PauseAmbientMusic();
         } 
     }
 
